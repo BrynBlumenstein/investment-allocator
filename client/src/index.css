@@ -3,10 +3,8 @@
 
 @theme {
 	--font-dm: 'DM Sans', sans-serif;
-	--color-primary: #a7ff82;
-	--color-secondary: #34312d;
 }
 
 body {
-	@apply font-dm text-secondary;
+	@apply font-dm;
 }

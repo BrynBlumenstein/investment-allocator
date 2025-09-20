@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
 
-const SignUpPage = () => {
+const UnauthorizedPage = () => {
 	return (
 		<>
-			<div>SignUpPage</div>
+			<div>UnauthorizedPage</div>
 			<Link
 				to="/"
 				className="cursor-pointer rounded-full font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300 md:text-lg"
@@ -14,4 +14,4 @@ const SignUpPage = () => {
 	);
 };
 
-export default SignUpPage;
+export default UnauthorizedPage;
