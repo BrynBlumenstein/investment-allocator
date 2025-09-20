@@ -2,14 +2,14 @@ import { createBrowserRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
 import CoreLayout from './layouts/CoreLayout';
 import LandingPage from './pages/LandingPage';
-import SignUpPage from './pages/SignUpPage';
-import SignInPage from './pages/SignInPage';
-import UnauthorizedPage from './pages/UnauthorizedPage';
 import AppLayout from './layouts/AppLayout';
 import AllocationToolPage from './pages/AllocationToolPage';
 import AllocationsPage from './pages/AllocationsPage';
 import AllocationPage from './pages/AllocationPage';
 import IncomeToInvestmentToolPage from './pages/IncomeToInvestmentToolPage';
+import SignUpPage from './pages/SignUpPage';
+import SignInPage from './pages/SignInPage';
+import UnauthorizedPage from './pages/UnauthorizedPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
