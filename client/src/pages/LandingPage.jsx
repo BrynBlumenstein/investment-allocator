@@ -2,9 +2,9 @@ import Hero from '../components/Hero';
 
 const LandingPage = () => {
 	return (
-		<div className="flex h-screen flex-col items-center px-4">
+		<main className="flex h-screen flex-col items-center px-4">
 			<Hero />
-		</div>
+		</main>
 	);
 };
 
