@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 
 const LinkButton = ({ path, text, variant = 'filled' }) => {
 	const baseClasses =
-		'cursor-pointer rounded-full border-1 border-neutral-300 px-4 py-2 text-xs shadow-sm transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300 md:px-5 md:py-3 md:text-sm';
+		'cursor-pointer rounded-full border-1 border-neutral-300 px-4 py-2 text-xs shadow-md transition-[background-color,border-color] duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300 md:px-5 md:py-3 md:text-sm';
 
 	const variantClasses =
 		variant === 'filled'
