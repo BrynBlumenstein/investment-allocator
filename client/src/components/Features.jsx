@@ -6,7 +6,7 @@ const Features = () => {
 			<h2 className="mb-6 text-center text-2xl font-medium md:mb-8 md:text-4xl">
 				Investing Made Simple
 			</h2>
-			<ul className="flex flex-col items-center gap-6 md:grid md:grid-cols-3">
+			<ul className="flex flex-col items-center gap-6 md:grid md:grid-cols-3 lg:gap-10">
 				<FeatureCard
 					header="Allocation Tool"
 					paragraph="Enter the amount you want to invest, pick an allocation, and instantly see how your money is distributed across assets."
