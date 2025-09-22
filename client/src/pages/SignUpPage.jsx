@@ -1,7 +1,7 @@
-import AuthPage from '../components/AuthPage';
+import AuthPageContent from '../components/AuthPageContent';
 
 const SignUpPage = () => {
-	return <AuthPage type="sign-up" />;
+	return <AuthPageContent type="sign-up" />;
 };
 
 export default SignUpPage;

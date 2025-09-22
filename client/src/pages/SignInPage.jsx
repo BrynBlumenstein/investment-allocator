@@ -1,7 +1,7 @@
-import AuthPage from '../components/AuthPage';
+import AuthPageContent from '../components/AuthPageContent';
 
 const SignInPage = () => {
-	return <AuthPage type="sign-in" />;
+	return <AuthPageContent type="sign-in" />;
 };
 
 export default SignInPage;
