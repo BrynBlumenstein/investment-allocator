@@ -1,5 +1,4 @@
-import { createBrowserRouter } from 'react-router';
-import { RouterProvider } from 'react-router/dom';
+import { BrowserRouter, Routes, Route } from 'react-router';
 import CoreLayout from './layouts/CoreLayout';
 import LandingPage from './pages/LandingPage';
 import AppLayout from './layouts/AppLayout';
@@ -12,51 +11,38 @@ import SignInPage from './pages/SignInPage';
 import UnauthorizedPage from './pages/UnauthorizedPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-const router = createBrowserRouter([
-	{
-		Component: CoreLayout,
-		children: [
-			{
-				index: true,
-				Component: LandingPage
-			},
-			{
-				Component: AppLayout,
-				children: [
-					{ path: 'allocation-tool', Component: AllocationToolPage },
-					{ path: 'allocations', Component: AllocationsPage },
-					{
-						path: 'allocations/:allocation',
-						Component: AllocationPage
-					},
-					{
-						path: 'income-to-investment-tool',
-						Component: IncomeToInvestmentToolPage
-					}
-				]
-			}
-		]
-	},
-	{
-		path: 'sign-up',
-		Component: SignUpPage
-	},
-	{
-		path: 'sign-in',
-		Component: SignInPage
-	},
-	{
-		path: 'unauthorized',
-		Component: UnauthorizedPage
-	},
-	{
-		path: '*',
-		Component: NotFoundPage
-	}
-]);
-
 const App = () => {
-	return <RouterProvider router={router} />;
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route element={<CoreLayout />}>
+					<Route index element={<LandingPage />} />
+					<Route element={<AppLayout />}>
+						<Route
+							path="allocation-tool"
+							element={<AllocationToolPage />}
+						/>
+						<Route
+							path="allocations"
+							element={<AllocationsPage />}
+						/>
+						<Route
+							path="allocations/:allocation"
+							element={<AllocationPage />}
+						/>
+						<Route
+							path="income-to-investment-tool"
+							element={<IncomeToInvestmentToolPage />}
+						/>
+					</Route>
+				</Route>
+				<Route path="sign-up" element={<SignUpPage />} />
+				<Route path="sign-in" element={<SignInPage />} />
+				<Route path="unauthorized" element={<UnauthorizedPage />} />
+				<Route path="*" element={<NotFoundPage />} />
+			</Routes>
+		</BrowserRouter>
+	);
 };
 
 export default App;
