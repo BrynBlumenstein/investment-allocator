@@ -2,7 +2,7 @@ import FeatureCard from './FeatureCard';
 
 const Features = () => {
 	return (
-		<section className="mb-14 md:mb-16">
+		<section className="mb-32">
 			<h2 className="mb-6 text-center text-2xl font-medium md:mb-8 md:text-4xl">
 				Investing Made Simple
 			</h2>
