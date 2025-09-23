@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import AuthFormInput from './AuthFormInput';
+import { useNavigate } from 'react-router';
 
 const AuthForm = ({ type }) => {
+	const navigate = useNavigate();
+
 	const [formData, setFormData] = useState({ username: '', password: '' });
 
 	const handleChange = (event) => {
@@ -13,10 +16,13 @@ const AuthForm = ({ type }) => {
 
 	const handleSignUp = (event) => {
 		event.preventDefault();
+		navigate('/sign-in');
+
 	};
 
 	const handleSignIn = (event) => {
 		event.preventDefault();
+		navigate('/allocation-tool');
 	};
 
 	return (
