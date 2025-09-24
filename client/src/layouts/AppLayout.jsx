@@ -17,14 +17,12 @@ const AppLayout = () => {
 
 	return (
 		<div className="flex h-screen flex-col">
-			<div className="sticky top-0">
-				<AppHeader />
-				<div className="flex h-14 items-center border-y border-neutral-300 bg-white py-3 pr-4 pl-2 md:hidden">
-					<IconButton onClick={toggleOpen} icon="fa-solid fa-bars" />
-				</div>
+			<AppHeader />
+			<div className="flex h-14 items-center border-y border-neutral-300 bg-white py-3 pr-4 pl-2 md:hidden">
+				<IconButton onClick={toggleOpen} icon="fa-solid fa-bars" />
 			</div>
 
-			<div className="flex h-full">
+			<div className="flex h-full overflow-hidden">
 				<div
 					className={`${open ? '' : 'hidden md:block'} flex w-full justify-between border-neutral-300 bg-white px-4 py-5 md:w-68 md:border-r`}
 				>
@@ -37,7 +35,9 @@ const AppLayout = () => {
 					</div>
 				</div>
 
-				<div className={`${open ? 'hidden' : ''} md:block`}>
+				<div
+					className={`${open ? 'hidden' : ''} grow overflow-y-auto md:block`}
+				>
 					<Outlet />
 				</div>
 			</div>

@@ -1,5 +1,69 @@
 const AllocationToolPage = () => {
-	return <div>AllocationToolPage</div>;
+	return (<div>AllocationToolPage
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+		<div>Space</div>
+	</div>);
 };
 
 export default AllocationToolPage;
