@@ -32,44 +32,46 @@ const NavList = ({ onItemClick }) => {
 	}, [allocation, location]);
 
 	return (
-		<ul className="mt-1">
-			<NavItem
-				label="Allocation Tool"
-				path="/allocation-tool"
-				onClick={onItemClick}
-				current={current}
-			/>
-			<NavItem
-				label="Allocations"
-				path="/allocations"
-				onClick={onItemClick}
-				current={current}
-			/>
-			<ul>
+		<nav>
+			<ul className="mt-1">
 				<NavItem
-					label="Allocation 1"
-					path="/allocations/allocation-1"
+					label="Allocation Tool"
+					path="/allocation-tool"
 					onClick={onItemClick}
 					current={current}
-					indented
 				/>
-			</ul>
-			<ul>
 				<NavItem
-					label="Allocation 2"
-					path="/allocations/allocation-2"
+					label="Allocations"
+					path="/allocations"
 					onClick={onItemClick}
 					current={current}
-					indented
+				/>
+				<ul>
+					<NavItem
+						label="Allocation 1"
+						path="/allocations/allocation-1"
+						onClick={onItemClick}
+						current={current}
+						indented
+					/>
+				</ul>
+				<ul>
+					<NavItem
+						label="Allocation 2"
+						path="/allocations/allocation-2"
+						onClick={onItemClick}
+						current={current}
+						indented
+					/>
+				</ul>
+				<NavItem
+					label="Income-to-Investment Tool"
+					path="/income-to-investment-tool"
+					onClick={onItemClick}
+					current={current}
 				/>
 			</ul>
-			<NavItem
-				label="Income-to-Investment Tool"
-				path="/income-to-investment-tool"
-				onClick={onItemClick}
-				current={current}
-			/>
-		</ul>
+		</nav>
 	);
 };
 
