@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import NavItem from './NavItem';
-import { useLocation } from 'react-router';
+import { useLocation, useParams } from 'react-router';
+import { kebabToTitle } from '../utils/kebab-to-title';
 
 const NavList = ({ onItemClick }) => {
 	const location = useLocation();
+	const { allocation } = useParams();
 	const [current, setCurrent] = useState('');
 
 	useEffect(() => {
@@ -20,19 +22,14 @@ const NavList = ({ onItemClick }) => {
 		) {
 			setCurrent('Allocations');
 		} else if (
-			path.endsWith('/allocation-1') ||
-			path.endsWith('/allocation-1/')
-		) {
-			setCurrent('Allocation 1');
-		} else if (
 			path.endsWith('/income-to-investment-tool') ||
 			path.endsWith('/income-to-investment-tool/')
 		) {
 			setCurrent('Income-to-Investment Tool');
 		} else {
-			setCurrent('');
+			setCurrent(kebabToTitle(allocation));
 		}
-	}, [location]);
+	}, [allocation, location]);
 
 	return (
 		<ul className="mt-1">
@@ -52,6 +49,15 @@ const NavList = ({ onItemClick }) => {
 				<NavItem
 					label="Allocation 1"
 					path="/allocations/allocation-1"
+					onClick={onItemClick}
+					current={current}
+					indented
+				/>
+			</ul>
+			<ul>
+				<NavItem
+					label="Allocation 2"
+					path="/allocations/allocation-2"
 					onClick={onItemClick}
 					current={current}
 					indented

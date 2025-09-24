@@ -1,10 +1,13 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation, useParams } from 'react-router';
 import AppHeader from '../components/AppHeader';
 import IconButton from '../components/IconButton';
 import NavList from '../components/NavList';
+import { kebabToTitle } from '../utils/kebab-to-title';
 
 const AppLayout = () => {
+	const location = useLocation();
+	const { allocation } = useParams();
 	const [open, setOpen] = useState(false);
 
 	const toggleOpen = () => {
@@ -18,8 +21,13 @@ const AppLayout = () => {
 	return (
 		<div className="flex h-screen flex-col">
 			<AppHeader />
-			<div className="flex h-14 items-center border-y border-neutral-300 bg-white py-3 pr-4 pl-2 md:hidden">
+			<div className="flex h-14 items-center gap-4 border-y border-neutral-300 bg-white py-3 pr-4 pl-2 md:hidden">
 				<IconButton onClick={toggleOpen} icon="fa-solid fa-bars" />
+				<div>{kebabToTitle(location.pathname.split('/')[1])}</div>
+				<div className={allocation ? '' : 'hidden'}>/</div>
+				<div className={allocation ? '' : 'hidden'}>
+					{kebabToTitle(allocation)}
+				</div>
 			</div>
 
 			<div className="flex h-full overflow-hidden">
