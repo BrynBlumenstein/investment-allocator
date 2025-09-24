@@ -7,7 +7,7 @@ const ErrorPageContent = ({ heading }) => {
 				<h1 className="mb-4 text-3xl font-medium">{heading}</h1>
 				<Link
 					to="/"
-					className="cursor-pointer rounded-md p-1 text-lg font-semibold transition-[background-color] hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-lime-300"
+					className="cursor-pointer rounded-md p-1 text-lg font-semibold transition-[background-color] duration-200 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300"
 				>
 					Return to Investment Allocator
 				</Link>

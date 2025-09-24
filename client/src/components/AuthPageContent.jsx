@@ -7,7 +7,7 @@ const AuthPage = ({ type = 'sign-up' }) => {
 			<section className="w-sm rounded-lg bg-white p-8 text-center md:shadow-md">
 				<Link
 					to="/"
-					className="cursor-pointer rounded-md p-1 text-lg font-semibold transition-[background-color] hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-lime-300"
+					className="cursor-pointer rounded-md p-1 text-lg font-semibold transition-[background-color] duration-200 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300"
 				>
 					Investment Allocator
 				</Link>
@@ -18,7 +18,7 @@ const AuthPage = ({ type = 'sign-up' }) => {
 							Already have an account?&nbsp;
 							<Link
 								to="/sign-in"
-								className="cursor-pointer rounded-md underline transition-[background-color] hover:text-neutral-500 focus-visible:outline-2 focus-visible:outline-lime-300"
+								className="cursor-pointer rounded-md underline transition-[background-color] duration-200 hover:text-neutral-500 focus-visible:outline-2 focus-visible:outline-lime-300"
 							>
 								Sign in
 							</Link>
@@ -32,7 +32,7 @@ const AuthPage = ({ type = 'sign-up' }) => {
 							Need an account?&nbsp;
 							<Link
 								to="/sign-up"
-								className="cursor-pointer rounded-md underline transition-[background-color] hover:text-neutral-500 focus-visible:outline-2 focus-visible:outline-lime-300"
+								className="cursor-pointer rounded-md underline transition-[background-color] duration-200 hover:text-neutral-500 focus-visible:outline-2 focus-visible:outline-lime-300"
 							>
 								Sign up
 							</Link>

@@ -1,11 +1,47 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router';
+import AppHeader from '../components/AppHeader';
+import IconButton from '../components/IconButton';
+import NavList from '../components/NavList';
 
 const AppLayout = () => {
+	const [open, setOpen] = useState(false);
+
+	const toggleOpen = () => {
+		setOpen((prev) => !prev);
+	};
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
 	return (
-		<>
-			<div>AppLayout</div>
-			<Outlet />
-		</>
+		<div className="flex h-screen flex-col">
+			<div className="sticky top-0">
+				<AppHeader />
+				<div className="flex h-14 items-center border-y border-neutral-300 bg-white py-3 pr-4 pl-2 md:hidden">
+					<IconButton onClick={toggleOpen} icon="fa-solid fa-bars" />
+				</div>
+			</div>
+
+			<div className="flex h-full">
+				<div
+					className={`${open ? '' : 'hidden md:block'} flex w-full justify-between border-neutral-300 bg-white px-4 py-5 md:w-68 md:border-r`}
+				>
+					<NavList onItemClick={handleClose} />
+					<div className="md:hidden">
+						<IconButton
+							onClick={handleClose}
+							icon="fa-solid fa-xmark"
+						/>
+					</div>
+				</div>
+
+				<div className={`${open ? 'hidden' : ''} md:block`}>
+					<Outlet />
+				</div>
+			</div>
+		</div>
 	);
 };
 

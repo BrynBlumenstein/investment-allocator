@@ -1,5 +1,5 @@
 const AllocationToolPage = () => {
-	return <div>AllocationToolPage</div>;
+	return <div className="h-screen">AllocationToolPage</div>;
 };
 
 export default AllocationToolPage;
