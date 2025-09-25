@@ -4,7 +4,7 @@ import AuthForm from './AuthForm';
 const AuthPage = ({ type = 'sign-up' }) => {
 	return (
 		<main className="flex h-screen items-center justify-center bg-white md:bg-neutral-50">
-			<section className="w-sm rounded-lg bg-white p-8 text-center md:shadow-md">
+			<section className="w-sm md:border md:border-neutral-300 rounded-lg bg-white p-8 text-center md:shadow-md">
 				<Link
 					to="/"
 					className="cursor-pointer rounded-md p-1 text-lg font-semibold transition-[background-color] duration-200 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300"

@@ -32,7 +32,7 @@ const AppLayout = () => {
 
 			<div className="flex h-full overflow-hidden">
 				<div
-					className={`${open ? '' : 'hidden md:block'} flex w-full justify-between border-neutral-300 bg-white px-4 py-5 md:w-68 md:border-r`}
+					className={`${open ? '' : 'hidden md:block'} flex w-full justify-between border-neutral-300 bg-white px-4 py-5 md:w-68 md:border-r shadow-md`}
 				>
 					<NavList onItemClick={handleClose} />
 					<div className="md:hidden">
