@@ -1,0 +1,33 @@
+datasource db {
+    provider = "postgresql"
+    url = env("DB_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model User {
+    id          Int          @id @default(autoincrement())
+    username    String       @unique
+    password    String
+    allocations Allocation[]
+}
+
+model Allocation {
+    id        Int     @id @default(autoincrement())
+    name      String
+    assets    Asset[]
+    creator   User    @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+    creatorId Int
+}
+
+model Asset {
+    id           Int        @id @default(autoincrement())
+    ticker       String
+    percentage   Int
+    allocation   Allocation @relation(fields: [allocationId], references: [id], onDelete: Cascade)
+    allocationId Int
+
+    @@unique([allocationId, ticker])
+}
