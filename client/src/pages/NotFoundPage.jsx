@@ -1,8 +1,18 @@
-import ErrorPageContent from '../components/ErrorPageContent';
+import { Link } from 'react-router';
 
 const NotFoundPage = () => {
 	return (
-		<ErrorPageContent heading="Page not found" />
+		<main className="flex h-screen items-center justify-center bg-white">
+			<section className="text-center">
+				<h1 className="mb-4 text-3xl font-medium">Page not found</h1>
+				<Link
+					to="/"
+					className="cursor-pointer rounded-md p-1 text-lg font-semibold transition-[background-color] duration-200 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-300"
+				>
+					Return to Investment Allocator
+				</Link>
+			</section>
+		</main>
 	);
 };
 

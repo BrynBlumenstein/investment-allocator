@@ -7,7 +7,6 @@ import AllocationPage from './pages/AllocationPage';
 import IncomeToInvestmentToolPage from './pages/IncomeToInvestmentToolPage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
-import UnauthorizedPage from './pages/UnauthorizedPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -37,7 +36,6 @@ const App = () => {
 				</Route>
 				<Route path="sign-up" element={<SignUpPage />} />
 				<Route path="sign-in" element={<SignInPage />} />
-				<Route path="unauthorized" element={<UnauthorizedPage />} />
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</BrowserRouter>
