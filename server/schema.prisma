@@ -8,26 +8,30 @@ generator client {
 }
 
 model User {
-    id          Int          @id @default(autoincrement())
-    username    String       @unique
-    password    String
-    allocations Allocation[]
+    id              String       @id @default(uuid()) @db.Uuid
+    username        String       @unique
+    passwordHash    String
+    allocations     Allocation[]
 }
 
 model Allocation {
-    id        Int     @id @default(autoincrement())
+    id        String  @id @default(uuid()) @db.Uuid
     name      String
     assets    Asset[]
     creator   User    @relation(fields: [creatorId], references: [id], onDelete: Cascade)
-    creatorId Int
+    creatorId String  @db.Uuid
+
+    @@unique([creatorId, name])
+    @@index([creatorId])
 }
 
 model Asset {
-    id           Int        @id @default(autoincrement())
+    id           String     @id @default(uuid()) @db.Uuid
     ticker       String
     percentage   Int
     allocation   Allocation @relation(fields: [allocationId], references: [id], onDelete: Cascade)
-    allocationId Int
+    allocationId String     @db.Uuid
 
     @@unique([allocationId, ticker])
+    @@index([allocationId])
 }
